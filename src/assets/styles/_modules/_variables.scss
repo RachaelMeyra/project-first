@@ -1,0 +1,261 @@
+$primary-light: #98f5f2;
+$primary-dark: #71d4d1;
+//$primary-medium: #000;
+
+$primary-shade-light: #e9f0f5;
+$primary-shade-dark: #555;
+
+$shade-light: #DBDBDB;
+$shade-dark: #444;
+
+$light-grey-light: #f1f1f1;
+$light-grey-lighter: #ebebeb;
+
+$shade-grey-light: #f1f1f1;
+$shade-grey-lighter: #ebebeb;
+
+$primary-text:#7f8c97;
+
+
+/* -----------------------------*/ 
+
+//Primary style
+
+/* -------------------------------- */
+
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* -----------------------------*/
+// Body
+/* -----------------------------*/
+
+body {
+  font-size: 16px;
+  color: $primary-text;
+  background-color: $primary-shade-dark;
+  padding:0px;
+  margin:0px;
+}
+
+.noshow {
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}
+
+.hidden { display: none; }
+
+.list {
+  p{
+    padding-left:10px;
+    padding-right:10px;
+    margin-top:15px;
+  }
+  h3 {
+    font-size:14px;
+    text-transform:uppercase;
+    &:after{
+      border-bottom:1px solid $shade-grey-light;
+      display:block;
+      position:absolute;
+      top:4px;
+    }
+  }
+  
+  span{
+    padding:10px 20px;
+    display:block;
+    width:100%;
+    cursor:pointer;
+    border-radius:3px;
+    color:#555;
+    background-color:$shade-grey-light;
+    border:1px solid $shade-grey-lighter;
+    text-decoration:none;
+    &.-selected{
+      background:$primary-light;
+      color:white;
+    }
+    &:hover{
+      background:#555;
+      color:white;
+    }
+  }
+  
+  ul {
+    margin:0px;
+    padding:0px;
+    li {
+      width:100%;
+      margin:0px;
+      padding:0px;
+      margin-top:5px;
+      margin-bottom:5px;
+      list-style:none;
+      a {
+        padding:10px 20px;
+        display:block;
+        width:100%;
+        cursor:pointer;
+        border-radius:3px;
+        color:#555;
+        background-color:$shade-grey-light;
+        border:1px solid $shade-grey-lighter;
+        text-decoration:none;
+        &:hover {
+          background:#555;
+          color:white;
+        }
+      }
+    }
+  }
+}
+
+.content{
+  &.-push {
+    height:600px;
+  }
+  float:left;
+  font-family: "Open Sans", sans-serif;
+  margin: 0 auto;
+  width: 100%;
+  padding: 30px;
+  border-radius: 4px;
+  margin-top: 30px;
+  margin-top:20px;
+  position: relative;
+  top: 0px;
+  background-color: white;
+  padding-bottom: 20px;
+  display: block;
+}
+
+// .item{
+//   background:$primary-light;
+//   border:1px solid $primary-shade-dark;
+//   padding:10px;
+//   margin-top:10px;
+//   border-radius:3px;
+// }
+
+.side-nav{
+  margin-top:0px;
+  position:fixed;
+  
+  //width:100%;
+  width:250px;
+  top:85px;
+  border:1px solid $shade-grey-light;
+  padding:10px;
+  right:20px;
+  background:white;
+  border-radius:4px;
+  ul, li{ padding: 0px; margin:0px;}
+  ul{
+    li{
+      width:100%;
+      list-style:none;
+      margin-top:10px;
+      border-left:2px solid white;
+      font-weight:normal;
+      &:hover{
+        span{
+          border-bottom:2px solid $shade-grey-light;
+        }
+      }
+      &:nth-child(1){ margin-top:0px !important;}
+      &.-selected{
+        font-weight:bold;
+        border-left:2px solid $primary-dark;
+      }
+      span{
+        cursor:pointer;
+        border-bottom:1px solid white;
+        display:block;
+        width:100%;
+        padding:10px;
+      }
+    }
+  }
+}
+
+.section-nav__container {
+    width:300px;
+  position:fixed;
+    &.-expand {
+      position:relative;
+    width:100%;
+    margin:0 auto;
+  }
+}
+
+.section-nav{
+  @extend .ease;
+  width:100%;
+  left:-320px;
+  position:relative;
+  z-index:999;
+  border-radius:4px;
+  border:1px solid $light-grey-light;
+  background:white;
+  min-height:700px;
+  @extend .shadow-primary;
+  top:130px;
+  
+  .settings{
+    position: relative;
+    right:8px;
+    z-index:999;
+    top:10px;
+  }
+  span.nav-close, 
+  span.nav-settings {                             display:block;
+    cursor:pointer;
+    background:white;
+    padding:10px 14px;
+    border:none;
+    float:right;
+    color:$shade-dark;
+    .fa{
+      color:$primary-text;
+    }
+    &:hover{
+      .fa{
+        color:$shade-light;
+      }
+    }
+  }
+  
+  &.-active{
+    left:20px;
+  }
+}
+
+.switch-holo.switch-light input:checked ~ span a{
+  background-color:$primary-light;
+}
+
+.switch-light{
+  width:280px;
+  background:white;
+}
+
+.title__banner {
+  margin:0 auto;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  border-bottom-right-radius:4px;
+  border-bottom-left-radius:4px;
+  background-color:$primary-dark;
+}

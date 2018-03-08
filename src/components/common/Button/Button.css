@@ -1,0 +1,20 @@
+.theme__btn {
+  color: white;
+  float: right;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  border-bottom: 3px solid #71d4d1;
+  background-color: #98f5f2 !important; }
+  .theme__btn.input {
+    padding: 11px 15px 11px;
+    border-radius: 3px;
+    border-bottom: 3px solid #71d4d1; }
+    .theme__btn.input:hover {
+      background: #71d4d1; }
+    .theme__btn.input .fa {
+      font-size: 20px;
+      position: relative;
+      top: 3px; }
+  .theme__btn:focus {
+    outline: none; }
